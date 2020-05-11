@@ -1,0 +1,171 @@
+
+*{
+    box-sizing: border-box;
+  }
+  body{
+    width: 100%;
+    min-height: 100%;
+    font-family: 'roboto', sans-serif ;
+    font-size: 22px;
+    margin: auto;
+    background-color: rgb(255, 0, 0);
+  }
+  
+  
+  #wrapper{
+    padding-top: 4em;
+    max-width: 1600px;
+    margin: auto;
+    padding-bottom: 100%;
+    position: relative;
+    color: white ;
+
+}
+
+  #wrapper::after{
+    content: "";
+    background-image: url( ../image/red_is_dead.jpg);
+    background-size: 1600px;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; 
+}
+  #formu{
+    margin-top: 10em;
+    padding-left: 2em;
+}
+
+#labPseudo{
+    width: 7em;
+    /* padding-right: 10px; */
+}
+#labPassword{
+    width: 7em;
+    /* padding-right: 10px; */
+}
+
+#option{
+  width: 14em;
+}
+.flex{
+    display: flex;
+    justify-content: start;
+}
+
+/* #labPseudo{
+    margin-bottom: 1em;
+} */
+
+
+
+
+
+
+
+  .nav-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* font-family: "Trebuchet MS" , Arial; */
+  }
+  .nav-wrapper::before,
+  .nav-wrapper::after{
+    content: '';
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 50%;
+    background-color: #EAFBFF;
+  }
+  
+  
+  .nav-wrapper nav{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .navigation{
+    max-width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgb(219, 71, 71);
+    padding-right: 30px;
+    line-height: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-wrapper ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 0;
+    overflow: hidden;
+    transition: .4s cubic-bezier(.77,0,.18,1);
+  }
+  .nav-wrapper.active ul{
+    width: 15em;
+    margin-right: 20px;
+  }
+  
+  li a{
+    color: rgb(175, 174, 174);
+    text-decoration: none;
+    transition: .3s;
+    padding: 0 1em;
+    font-size: 18px;
+  }
+  a:hover{
+    font-size: 22px;
+  
+    ;
+  }
+  
+  .nav-toogler{
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 48px;
+    padding: 14px 5px;
+    cursor: pointer;
+  }
+  .nav-wrapper:not(.active) .nav-toogler{
+    margin-left: -10px;
+  }
+  .nav-toogler::before,
+  .nav-toogler::after{
+    content: '';
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    transition: .4s cubic-bezier(.77,0,.18,1);
+  }
+  .nav-toogler::after {
+    margin-top: 10px;
+  }
+  .nav-wrapper.active .nav-toogler::before,
+  .nav-wrapper.active .nav-toogler::after{
+    position: absolute;
+    top: 50%;
+    background-color: rgb(255, 255, 255);
+    transform: rotate(135deg);
+  }
+  .nav-wrapper.active .nav-toogler::after {
+    transform: rotate(-135deg);
+    margin-top: 0;
+  }
+
+
+  

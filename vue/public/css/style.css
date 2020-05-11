@@ -1,0 +1,34 @@
+
+*{
+    box-sizing: border-box;
+  }
+  body{
+    width: 100%;
+    min-height: 100%;
+    font-family: 'roboto', sans-serif ;
+    font-size: 16px;
+    margin: auto;
+  }
+  
+  p{
+    margin-block-start: 0em;
+  }
+  #wrapper{
+    padding-top: 4em;
+    max-width: 1024px;
+    margin: auto;
+  }
+
+  #chooseLetter{
+    padding-top: 2em;
+  }
+
+  section{
+    display: flex;
+    justify-content: space-evenly
+  }
+
+  #letter_use{
+    display: flex;
+   padding-top: 5em;
+  }
